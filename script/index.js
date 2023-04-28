@@ -6,9 +6,12 @@ const p1Nombre = "Nosotros";
 const p2Nombre = "Ellos";
 console.log(partidaEnMemoria);
 
-const p1 = new Contador(p1Nombre, document.getElementById("jugador1Container"), partidaEnMemoria["Nosotros"]);
-const p2 = new Contador(p2Nombre,document.getElementById("jugador2Container"),partidaEnMemoria[p2Nombre]);
-
+const p1 = new Contador(p1Nombre, document.getElementById("jugador1Container"),
+            partidaEnMemoria && partidaEnMemoria[p1Nombre] ? partidaEnMemoria[p1Nombre] : 0
+);
+const p2 = new Contador(p2Nombre,document.getElementById("jugador2Container"),
+            partidaEnMemoria && partidaEnMemoria[p2Nombre] ? partidaEnMemoria[p2Nombre] : 0
+);
 
 
 

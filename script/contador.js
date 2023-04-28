@@ -3,6 +3,7 @@ export class Contador{
     nombre;
     cuentaElement;
     containerElement;
+    fosforos;
 
     constructor(nombre, containerElement, cuentaInicial = 0){
         this.nombre = nombre;
@@ -21,6 +22,7 @@ export class Contador{
                 title: this.nombre,
                 text: "GANARÓN",
                 icon: "success",
+                button: "APRETE RESET PARA REINICIAR",
             });
         }
     }
@@ -43,8 +45,6 @@ export class Contador{
     }
 
     actualizarCuenta(){
-        console.log(this.numero, this.nombre);
-
         const separadoresActuales = this.containerElement.querySelectorAll(".separador");
         const gruposActuales = this.containerElement.querySelectorAll(".grupo");
 
@@ -62,10 +62,9 @@ export class Contador{
                     const separador = document.createElement("div");
                     separador.classList.add("separador");
                     this.cuentaElement.appendChild(separador);
-                }
+                };
                 this.cuentaElement.appendChild(grupoActual);
             }
-            
             const nuevoFosforo = document.createElement("img");
             nuevoFosforo.src = "img/fosforo.png";
             nuevoFosforo.classList.add("fosforo"+(i%5+1));
