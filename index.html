@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="script/index.js" type="module" defer></script>
+    <title>Contador de Truco</title>
+</head>
+<body>
+    <h1>Contador de Truco</h1>
+    <div id="jugadoresContainer">
+        <div id="jugador1Container" class="jugadorContainer">
+            <div class="botonesJugador">
+                <button class="agregar">+</button>
+                <button class="restar">-</button>
+            </div>
+            <h2></h2>
+            <div class="cuenta"></div>
+        </div>
+        <div id="jugador2Container" class="jugadorContainer">
+            <div class="botonesJugador">
+                <button class="agregar">+</button>
+                <button class="restar">-</button>
+            </div>
+            <h2></h2>
+            <div class="cuenta"></div>
+        </div>
+    </div>
+    <button id="reset">Reset</button>
+    <dialog type="modal">
+        <p>Estas seguro que queres resetear la partida?</p>
+        <button id="aceptar">Aceptar</button>
+        <button id="volver">Volver</button>
+    </dialog>
+    <footer>
+        <p>Hecho con amor para los amantes del Truco</p>
+        <a href="https://github.com/gonzaloherlein" target="_blank">
+            <i class='bx bxl-github'></i>
+        </a>   
+    </footer>
+</body>
+</html>
