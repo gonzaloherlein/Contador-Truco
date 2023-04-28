@@ -6,8 +6,12 @@ const p1Nombre = "Nosotros";
 const p2Nombre = "Ellos";
 console.log(partidaEnMemoria);
 
-const p1 = new Contador(p1Nombre, document.getElementById("jugador1Container"), partidaEnMemoria[p1Nombre]);
+const p1 = new Contador(p1Nombre, document.getElementById("jugador1Container"), partidaEnMemoria["Nosotros"]);
 const p2 = new Contador(p2Nombre,document.getElementById("jugador2Container"),partidaEnMemoria[p2Nombre]);
+
+
+
+
 
 document.getElementById("reset").addEventListener("click", ()=>{
     modal.showModal();
